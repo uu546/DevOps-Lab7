@@ -1,0 +1,1 @@
+@'# Go*.exe*.exe~*.dll*.so*.dylib*.test*.outcoverage.out# IDE.vscode/.idea/# OS.DS_StoreThumbs.db# Секреты.env*.local'@ | Out-File -Encoding utf8 .gitignore
