@@ -1,7 +1,8 @@
 package book
 
 import "context"
-проверка изменения ветки main
+проверка изменения ветки main 
+
 type Book struct {
 	ID        string `json:"id,omitempty"`
 	Title     string `json:"title"`
