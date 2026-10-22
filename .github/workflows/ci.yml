@@ -24,6 +24,9 @@ jobs:
           go-version: ${{ matrix.go-version }}
           cache: false
 
+      - name: Disable toolchain auto-download
+        run: go env -w GOTOOLCHAIN=local  
+
       - name: Cache Go modules
         uses: actions/cache@v4
         with:
