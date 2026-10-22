@@ -16,6 +16,7 @@ import (
 )
 
 func main() {
+
 	repo := repository.NewMemoryRepository()
 	svc := implementation.NewService(repo)
 	endpoints := transport.MakeEndpoints(svc)
