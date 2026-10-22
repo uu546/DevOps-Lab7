@@ -16,8 +16,6 @@ import (
 )
 
 func main() {
-testLinter := 1
-
 	repo := repository.NewMemoryRepository()
 	svc := implementation.NewService(repo)
 	endpoints := transport.MakeEndpoints(svc)
