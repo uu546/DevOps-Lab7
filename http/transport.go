@@ -10,7 +10,7 @@ import (
 
 	"example.com/book-service/transport"
 )
-
+ 
 // NewService связывает эндпоинты с HTTP.
 func NewService(endpoints transport.Endpoints) http.Handler {
 	r := mux.NewRouter()
