@@ -1,0 +1,47 @@
+syntax = "proto3";
+
+package book;
+
+option go_package = "example.com/book-service/pb";
+
+service BookService {
+  rpc Create(CreateRequest) returns (CreateResponse);
+  rpc GetByID(GetByIDRequest) returns (GetByIDResponse);
+  rpc UpdateAuthor(UpdateAuthorRequest) returns (UpdateAuthorResponse);
+}
+
+message Book {
+  string id = 1;
+  string title = 2;
+  string author = 3;
+  int32 year = 4;
+  string isbn = 5;
+  bool available = 6;
+}
+
+message CreateRequest {
+  string title = 1;
+  string author = 2;
+  int32 year = 3;
+  string isbn = 4;
+}
+message CreateResponse {
+  string id = 1;
+  string error = 2;
+}
+
+message GetByIDRequest {
+  string id = 1;
+}
+message GetByIDResponse {
+  Book book = 1;
+  string error = 2;
+}
+
+message UpdateAuthorRequest {
+  string id = 1;
+  string author = 2;
+}
+message UpdateAuthorResponse {
+  string error = 1;
+}
